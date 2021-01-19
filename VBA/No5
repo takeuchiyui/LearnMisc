@@ -56,14 +56,12 @@ Private Sub output()
         
     Close #1
     
-    
  '---------------------------------------------------------------
 
     d = 1
     
     For Each log In list
-        
-            
+             
         Cells(d, "A") = log
    
         
@@ -88,8 +86,8 @@ Private Sub output()
         End If
         
         d = d + 1
-            
-            
+                
+                
         Set wb = Nothing
         Set ws = Nothing
                           
@@ -98,3 +96,8 @@ Private Sub output()
         Close #2
 
 End Sub
+
+
+
+
+
