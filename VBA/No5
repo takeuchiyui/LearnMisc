@@ -3,9 +3,7 @@ Private Sub output()
     Dim FileNumber
     Dim InputData
     Dim FilePath
-    'エクスプローラからファイルを指定
     Dim path, FileName
-    '配列宣言
     Dim log As Variant
     Dim ts As TextStream
     Dim fso As FileSystemObject
@@ -56,14 +54,12 @@ Private Sub output()
         
     Close #1
     
-    
  '---------------------------------------------------------------
 
     d = 1
     
     For Each log In list
-        
-            
+             
         Cells(d, "A") = log
    
         
@@ -88,8 +84,8 @@ Private Sub output()
         End If
         
         d = d + 1
-            
-            
+                
+                
         Set wb = Nothing
         Set ws = Nothing
                           
@@ -98,3 +94,8 @@ Private Sub output()
         Close #2
 
 End Sub
+
+
+
+
+
