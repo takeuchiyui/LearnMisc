@@ -17,7 +17,7 @@ Private Sub output()
     '任意フォルダを設定するダイアログを表示します
     With Application.FileDialog(msoFileDialogFilePicker)
     
-    'カレントディレクトリを指定します
+    'カレントディレクトリを指定します test
     .InitialFileName = ThisWorkbook.path
     
     '設定しなかったら終了します
