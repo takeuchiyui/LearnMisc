@@ -1,27 +1,41 @@
-'Q：作り方の構成は合っているのか
-'Q：今まではモジュールですべて書いていたが、今回はシートに直接書いている
 
+'Q:テキストの処理にはいらないのはなぜ
 'テキスト
 Sub TextBox1()
+
+     Dim nowdate As Date
+     
+    '日付を取得して変数に格納
+    'nowdate = Format(Date, "yyyymmdd")
+    nowdate = Data()
     
-    'テキストに初期値を設定したい
-    '初期値のプロパティを設定する？(valueの部分）
-    TextBox1.Value = Format(Date, "yyyymmdd")
+    
+    '初期値のプロパティを設定する
+    Me.TextBox1.Value = nowdate
+    
     
 End Sub
 
 '前日ボタン
 Sub daybefore_Click()
     
-    'テキスト欄の初期値を取得してそこから－1日をしたいが、書き方が思い浮かばない
+     Dim nowdate As Date
     
+    'テキストのnowdateを使って処理したい
+    nowdate = Data()  '←必要ないはず
     
     '1日前の日付を取得したい
-    Me.TextBox1.Value = DateAdd("d", -1, Date)
+    'Me.TextBox1.Value = DateAdd("d", -1, Date)
     
-    'テキスト入力された日付をファイル名に格納する
+    
+    'nowdateを使って前日を取得
     '作成したパスを引数として渡してあげる
+    ' 昨日の日付を取得
+    nowdate = Date - 1
+    Debug.Print (nowdate)
     
+    nowdate = DateAdd("nowdate", -1, Date)
+    Debug.Print (nowdate)
     
     
     'output()を呼び出して出力する
