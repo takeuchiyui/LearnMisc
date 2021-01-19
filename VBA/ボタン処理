@@ -3,10 +3,10 @@
 
 'テキスト
 Sub TextBox1()
-
+    
     'テキストに初期値を設定したい
-    'エラーは出ないが実行するとファイルが落ちて再起動する
-    TextBox1.ControlTipText = "2021/01/19"
+    '初期値のプロパティを設定する？(valueの部分）
+    TextBox1.Value = Format(Date, "yyyymmdd")
     
 End Sub
 
@@ -14,7 +14,7 @@ End Sub
 Sub daybefore_Click()
     
     'テキスト欄の初期値を取得してそこから－1日をしたいが、書き方が思い浮かばない
-    'Q：引数をどうやって渡すのか？
+    
     
     '1日前の日付を取得したい
     Me.TextBox1.Value = DateAdd("d", -1, Date)
@@ -30,7 +30,7 @@ Sub daybefore_Click()
 End Sub
 
 
-'翌日ボタン
+
 Sub nextday_Click()
 
      Me.TextBox1.Value = DateAdd("d", -1, Date)
